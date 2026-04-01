@@ -58,46 +58,103 @@
     hr.rule { border: none; border-top: 1px solid var(--c-rule); margin: 0; }
 
     /* ─── NAV ─── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      height: 72px;
-      background: rgba(250,250,249,.92);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border-bottom: 1px solid var(--c-rule);
-      transition: box-shadow .3s;
-    }
-    nav.scrolled { box-shadow: var(--shadow-md); }
-    .nav-inner {
-      height: 100%; display: flex; align-items: center;
-      justify-content: space-between;
-      max-width: 1120px; margin: 0 auto; padding: 0 2rem;
-    }
-    .nav-brand { display: flex; align-items: center; flex-shrink: 0; }
-    .nav-brand img { height: 150px; width: auto; object-fit: contain; }
-    .nav-links {
-      display: flex; align-items: center;
-      gap: 0;
-      position: absolute; left: 50%; transform: translateX(-50%);
-    }
-    .nav-links a {
-      font-size: .875rem; font-weight: 400; color: var(--c-muted);
-      padding: .5rem 1.1rem; border-radius: var(--radius-sm);
-      transition: color .2s, background .2s;
-      white-space: nowrap;
-    }
-    .nav-links a:hover { color: var(--c-ink); background: var(--c-bg3); }
-    .nav-cta {
-      background: var(--c-accent); color: #fff;
-      font-size: .86rem; font-weight: 500; letter-spacing: .01em;
-      padding: .55rem 1.3rem; border-radius: var(--radius-sm);
-      transition: background .2s, transform .15s;
-      box-shadow: 0 2px 8px rgba(27,59,111,.22);
-      flex-shrink: 0;
-    }
-    .nav-cta:hover { background: var(--c-accent2); transform: translateY(-1px); }
-    .nav-mob-toggle { display: none; cursor: pointer; padding: .4rem; }
-    .nav-mob-toggle span { display: block; width: 22px; height: 1.5px; background: var(--c-ink); transition: all .25s; margin: 5px 0; }
+/* ─── NAV ─── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  height: 72px;
+  background: rgba(250,250,249,.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--c-rule);
+  transition: box-shadow .3s;
+}
+
+nav.scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.nav-inner {
+  height: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+}
+
+.nav-brand img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.nav-links a {
+  font-size: .875rem;
+  font-weight: 400;
+  color: var(--c-muted);
+  padding: .5rem 1.1rem;
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: var(--c-ink);
+  background: var(--c-bg3);
+}
+
+.nav-cta {
+  background: var(--c-accent);
+  color: #fff;
+  font-size: .86rem;
+  font-weight: 500;
+  letter-spacing: .01em;
+  padding: .55rem 1.3rem;
+  border-radius: var(--radius-sm);
+  transition: background .2s, transform .15s;
+  box-shadow: 0 2px 8px rgba(27,59,111,.22);
+  justify-self: end;
+}
+
+.nav-cta:hover {
+  background: var(--c-accent2);
+  transform: translateY(-1px);
+}
+
+.nav-mob-toggle {
+  display: none;
+  cursor: pointer;
+  padding: .4rem;
+}
+
+.nav-mob-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--c-ink);
+  transition: all .25s;
+  margin: 5px 0;
+}
 
     /* ─── HERO ─── */
     .hero {
@@ -477,15 +534,14 @@
     <a href="#" class="nav-brand">
       <img src="logo.png" alt="Symphonia Consulting" />
     </a>
-    <nav class="nav-links">
+
+    <div class="nav-links">
       <a href="#about">À propos</a>
       <a href="#services">Services</a>
       <a href="#strengths">Atouts</a>
       <a href="#hiring">Recrutement</a>
-    </nav>
-    <a href="#contact" class="nav-cta">Nous contacter</a>
-  </div>
-</nav>
+    </div>
+
     <a href="#contact" class="nav-cta">Nous contacter</a>
   </div>
 </nav>
