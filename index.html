@@ -197,12 +197,58 @@
     .hc-more { font-size: .8rem; color: var(--c-muted); text-align: center; margin-top: .75rem; }
 
     /* ─── LOGOS STRIP ─── */
-    .strip { padding: 2.5rem 0; background: var(--c-bg2); border-top: 1px solid var(--c-rule); border-bottom: 1px solid var(--c-rule); }
-    .strip-inner { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; justify-content: center; }
-    .strip-label { font-size: .72rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--c-muted); white-space: nowrap; }
-    .strip-divider { width: 1px; height: 20px; background: var(--c-rule); }
-    .strip-sectors { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
-    .strip-sectors span { font-size: .85rem; color: var(--c-muted); font-weight: 400; }
+
+    .strip {
+        padding: 2.5rem 0;
+        background: var(--c-bg2);
+        border-top: 1px solid var(--c-rule);
+        border-bottom: 1px solid var(--c-rule);
+    }
+    
+    .strip-inner {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .strip-label {
+        font-size: .72rem;
+        font-weight: 500;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        color: var(--c-muted);
+        white-space: nowrap;
+    }
+    
+    .strip-divider {
+        width: 1px;
+        height: 20px;
+        background: var(--c-rule);
+    }
+    
+    .strip-sectors {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .strip-sectors span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .strip-sectors img {
+        height: clamp(30px, 5vw, 50px);
+        width: auto;
+        max-width: 140px;
+        object-fit: contain;
+        display: block;
+    }
 
     /* ─── ABOUT ─── */
     .about { padding: 7rem 0; }
